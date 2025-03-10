@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <head>
+      <title>my first javascript</title>
+    </head>
+
+    <style>
+      .none {
+        display: none;
+      }
+    </style>
+  </head>
+  <div class="none">
+    <body>
+      <h2>Testing testing testing</h2>
+
+      <p id="demo">This is power</p>
+
+      <button
+        type="button"
+        onclick="document.getElementById('demo').innerHTML = 'improvise adapt overcome' "
+      >
+        find out
+      </button>
+
+      <p
+        id="transform"
+        style="text-transform: uppercase; font-weight: bold; color: orangered"
+      >
+        the light bulb
+      </p>
+      <button
+        type="button"
+        onclick='getElementById("transform").style.fontSize="40px"'
+      >
+        click me
+      </button>
+      <button
+        type="button"
+        onclick='document.getElementById("myimage").src="pic_bulbon.gif"'
+      >
+        Turn on the Light
+      </button>
+      <img
+        id="myimage"
+        src="pic_bulboff.gif"
+        alt="lightbulb"
+        style="width: 100px"
+      />
+      <button
+        type="button"
+        onclick='document.getElementById("myimage").src="pic_bulboff.gif"'
+      >
+        Turn off the light
+      </button>
+    </body>
+  </div>
+</html>
+
+<html>
+  <div>
+    <p id="demo"></p>
+
+    <script>
+      document.getElementById("demo").innerHTML = "my first javascript";
+    </script>
+  </div>
+</html>

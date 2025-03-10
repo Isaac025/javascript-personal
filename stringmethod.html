@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>string methods</title>
+  </head>
+  <body>
+    <!-- length property returns length of a string -->
+    <p id="str"></p>
+    <!-- The indexOf() method returns the index of (the position of) 
+     the first occurrence of a specified text in a string: -->
+    <p id="str1"></p>
+    <p id="str2"></p>
+    <!-- The lastIndexOf() method returns the index of the 
+     last occurrence of a specified text in a string: -->
+    <p id="str3"></p>
+    <p>
+      Both methods accept a second parameter as the starting position for the
+      search:
+    </p>
+    <p>
+      The lastIndexOf() methods searches backwards (from the end to the
+      beginning), meaning: if the second parameter is 15, the search starts at
+      position 15, and searches to the beginning of the string.
+    </p>
+    <p id="str4"></p>
+    <p id="str5"></p>
+    <p>
+      The search() method searches a string for a specified value and returns
+      the position of the match:
+    </p>
+    <p id="str6"></p>
+    <h5>Extracting string parts</h5>
+    <p>
+      There are 3 methods for extracting a part of a string:
+      <strong>slice(start, end)</strong> <strong>substring(start, end)</strong>
+      <strong>substr(start, length)</strong>
+    </p>
+    <p id="str7"></p>
+    <p>
+      If a parameter is negative, the position is counted from the end of the
+      string.
+    </p>
+    <p id="str8"></p>
+    <p id="str9"></p>
+    <p>The difference is that substring() cannot accept negative indexes.</p>
+    <p id="str10"></p>
+    <p id="str11"></p>
+    <p id="str12"></p>
+    <p id="str13">improvise adapt overcome and improve and overcome</p>
+    <button type="button" onclick="myfunc()">try it!!</button>
+    <p id="str14">improvise adapt overcome and improve and overcome</p>
+    <button type="button" onclick="myFunc()">try it!!</button>
+    <p id="str15">Breaking bad</p>
+    <button type="button" onclick="func()">CAPS</button>
+    <!-- <button type="button" onclick="Function()">CAPS</button> -->
+
+    <p id="str16"></p>
+    <h4>Extracting String Characters</h4>
+    <p id="str17"></p>
+    <p id="str18"></p>
+    <p id="str19"></p>
+    <p id="str20"></p>
+    <p id="str21"></p>
+    <button type="button" onclick="myArray()">Try it</button>
+    <p id="str22"></p>
+  </body>
+  <script>
+    var txt = "ahiwhfibbbc";
+    document.getElementById("str").innerHTML = txt.length;
+
+    var tst = "look before you leap and improvise, adapt overcome";
+    var pos = tst.indexOf("leap");
+    document.getElementById("str1").innerHTML = pos;
+
+    var wrd = "Please locate where 'locate' occurs!";
+    document.getElementById("str2").innerHTML =
+      wrd.indexOf("'locate'") + "<br>" + wrd.lastIndexOf("happen");
+
+    var ind =
+      "look improvise before you leap and improvise, adapt overcome improvise";
+    var pos1 = ind.lastIndexOf("john");
+    document.getElementById("str3").innerHTML = pos1;
+  </script>
+
+  <script src="stringmethod.js"></script>
+</html>

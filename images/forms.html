@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Application Form</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        /* margin: 0; */
+        /*padding: 0;*/
+      }
+
+      body {
+        font-family: sans-serif;
+        background-color: #1098ad;
+      }
+
+      input:focus {
+        background-color: yellow;
+      }
+
+      .main {
+        text-transform: uppercase;
+        text-align: center;
+        color: #f1f1f1;
+        margin-top: 10px;
+      }
+
+      .main p {
+        color: orangered;
+        font-style: italic;
+        background-color: #adcccc;
+        margin-bottom: 20px;
+      }
+
+      .form {
+        margin: 20px;
+      }
+
+      .arrange {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+
+      input[type="search"] {
+        width: 40%;
+        background-color: #f2f2f2;
+        padding: 10px 5px;
+        border: 2px solid #ccc;
+        box-sizing: border-box;
+        border-radius: 4px;
+        font-size: 16px;
+        transition: 0.5s ease-in-out;
+      }
+
+      input[type="search"]:focus {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="main">
+      <h1>Jerry and Sons Elementary and Technological Institution</h1>
+      <p>center for the creative minds</p>
+    </header>
+    <!-- method can be post or get: the The default method when submitting form data is GET.
+However, when GET is used, the submitted form data will be visible in the page address field: 
+Always use POST if the form data contains sensitive or personal information. The POST method does not display the submitted form data in the page address field.
+form submissions with post can not be bookmarked-->
+    <form class="form" action="/action_page.php" target="_blank" method="post">
+      <fieldset>
+        <legend style="text-transform: uppercase">Personal Information</legend>
+        <!--the _blank opens the form in a new window -->
+        Firstname:
+        <br />
+        <input
+          type="text"
+          name="firstname"
+          value="Olayiwola"
+          size="50"
+          maxlength="10"
+        />
+        <br />
+        <br />
+        Lastname:
+        <br />
+        <input
+          type="text"
+          name="lastname"
+          value="Akano"
+          size="50"
+          maxlength="10"
+        />
+        <br />
+        <br />
+        Telephone:
+        <input
+          type="tel"
+          name="phone"
+          pattern="[0-9]{3} - [0-9]{3} - [0-9]{2} - [0-9]{3}"
+          title="country Telephone code"
+          required
+        />
+        <br />
+        <br />
+        Gender:
+        <br />
+        <input type="radio" name="gender" value="male" checked /> Male
+        <br />
+        <input type="radio" name="gender" value="female" /> Female <br />
+        <input type="radio" name="gender" value="other" /> Other <br />
+        <br />
+        Level of Education:<br />
+        <input type="radio" name="school" value="O-level" /> 0-Level <br />
+        <input type="radio" name="school" value="Bachelor Degree" checked />
+        Bachelor degree <br />
+        <input type="radio" name="school" value="Master Degree" /> Master Degree
+        <br />
+        <input type="radio" name="school" value="Doctorate degree" /> Doctorate
+        <br />
+        <br />
+
+        <input
+          type="image"
+          src="img_submit.gif"
+          src="submit"
+          height="50"
+          width="50"
+        />
+        <input type="reset" /><br />
+        <input type="submit" formnovalidate value="submit without validation" />
+      </fieldset>
+    </form>
+    <!-- formenctype="multipart/form-data"
+          value="syubmitted as multipart/form-data" -->
+    <!-- <input type="submit" formmethod="get" value="submit using get" /> -->
+    <!-- <input type="submit" formnovalidate value="submit without validation" /> -->
+
+    <!-- If the type attribute is omitted, the input field gets the default type: "text". -->
+    <form action="/action_page.php" target="_blank" method="post">
+      <!-- for input(radio)- checked For select(option)- selected- -->
+      <fieldset>
+        <legend>POST AVAILABLE</legend>
+        <div class="arrange">
+          <select size="4" multiple name="post">
+            <option value="Managing director">Managing director</option>
+            <option value="Provost">Provost</option>
+            <option value="Bursar">Bursar</option>
+            <option value="Secretary">Secretary</option>
+            <option value="Lecturer">Lecturer</option>
+            <option value="Facutlty officer" selected>Facutlty officer</option>
+          </select>
+
+          <textarea name="message" style="width: 600px; height: 200px">
+my name is ..... and I am vying for the post of ...,.. this are my qualifications with my cv attached</textarea
+          >
+        </div>
+        <br />
+        Levels available in this institutions:
+        <input list="levels" name="level" />
+        <datalist id="levels">
+          <option value="100 level"></option>
+          <option value="200 level"></option>
+          <option value="300 level"></option>
+          <option value="400 level"></option>
+          <option value="500 level"></option>
+        </datalist>
+        <br />
+        <br />
+        Skills and area of Experience: <br />
+        <input type="checkbox" name="skill" value="data analyst" />data
+        analyst<br />
+        <input type="checkbox" name="skill" value="Product designer" />Product
+        designer<br />
+        <input type="checkbox" name="skill" value="Project designer" />Project
+        designer<br />
+        <input type="checkbox" name="skill" value="Developer" />Developer<br />
+        <input type="checkbox" name="skill" value="Watchman" />Watchman <br />
+        <br />
+        <!-- <input type="submit" value="submit" <br /> -->
+        <br />
+        <br />
+        <br />
+        <input
+          type="button"
+          onclick="alert('Application received!!! check back later')"
+          value="Submit"
+        />
+      </fieldset>
+    </form>
+    <!-- not learnt <output> yet -->
+    <form action="/action_page.php" target="_blank" method="post" id="form2">
+      <input type="text" name="userid" placeholder="Username" /><br />
+
+      <input
+        type="password"
+        name="psw"
+        pattern="[A-Z]{1}[a-z]{8}[0-9]{4}"
+        title="use uppercase letters, lowercase letters and numbers"
+        placeholder="password"
+      /><br />
+      <!-- Html5 for forms -->
+      Select your favourite Color:<br />
+      <input type="color" name="favcolor" value="#1098ad" /><br /><br />
+      Birthdaytime:
+      <input type="datetime-local" name="bdaytime" />
+      <!-- 30 Birthday: -->
+      <br />
+      <br />
+      Birthday(month and year): <br />
+      <input type="month" name="bmonth" />
+      <br />
+      <!-- <input type="email" name="email" /> -->
+      <input type="file" name="myfile" multiple /><br />
+      <br />
+      number between -1 and 50: <br />
+      <input
+        type="number"
+        name="marks"
+        min="-50"
+        max="500"
+        step="10"
+        value="200"
+      />
+      <br />
+      <br />
+      Points:
+      <input type="range" name="points" min="0" max="30" />
+      <br /><br />
+      <input type="search" name="googlesearch" placeholder="search..." /><br />
+      <br />
+      <input type="time" name="usr_time" />
+      <br />
+      Add Homepage: <br />
+      <input type="url" name="homepage" /><br />
+      Select a week:<br />
+      <input type="week" name="year_week" /><br /><br />
+      <input type="submit" value="send" />
+    </form>
+  </body>
+</html>

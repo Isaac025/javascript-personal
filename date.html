@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DATE OBJECTS</title>
+  </head>
+  <body>
+    <p>new Date() creates a new date object with the current date and time:</p>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p>
+      You cannot omit month. If you supply only one parameter it will be treated
+      as milliseconds.
+    </p>
+    <p id="demo5"></p>
+    <p>One and two digit years will be interpreted as 19xx:</p>
+    <p id="demo6"></p>
+    <p>new Date(dateString) creates a new date object from a date string:</p>
+    <p id="demo7"></p>
+    <p>
+      January 01 1970 minus 100 000 000 000 milliseconds is approximately
+      October 31 1966:
+    </p>
+    <p id="demo8"></p>
+    <p>One day (24 hours) is 86 400 000 milliseconds.</p>
+    <p id="demo9"></p>
+    <p>
+      The toUTCString() method converts a date to a UTC string (a date display
+      standard).
+    </p>
+    <p id="demo10"></p>
+    <p>The toDateString() method converts a date to a more readable format:</p>
+    <p id="demo11"></p>
+    <h6>
+      Independent of input format, JavaScript will (by default) output dates in
+      full text string format:
+    </h6>
+    <p id="demo12"></p>
+    <p>ISO dates can be written without month and day (YYYY):</p>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+    <p>
+      If you want to modify the time relative to UTC, remove the Z and add
+      +HH:MM or -HH:MM instead:
+    </p>
+    <p id="demo15"></p>
+    <p>Short dates are written with an "MM/DD/YYYY" syntax like this:</p>
+    <p id="demo16"></p>
+    <p id="demo17"></p>
+    <p id="demo18"></p>
+    <p id="demo19"></p>
+    <p>
+      Date.parse() returns the number of milliseconds between the date and
+      January 1, 1970:
+    </p>
+    <p id="demo20"></p>
+    <p>Date.parse(string) returns milliseconds.</p>
+    <p>You can use the return value to convert the string to a date object:</p>
+    <p id="demo21"></p>
+  </body>
+</html>
+<script src="date.js"></script>

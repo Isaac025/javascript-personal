@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>datatypes</title>
+  </head>
+  <body>
+    <p id="txtt"></p>
+    <p id="txttt"></p>
+    <p id="tst"></p>
+    <p id="demo"></p>
+    <p id="txtt1"></p>
+    <p id="tst1"></p>
+    <p id="demo1"></p>
+    <p id="demo11"></p>
+    <p id="demo2"></p>
+    <p id="tst2"></p>
+    <p id="tst3"></p>
+    <p id="tst4"></p>
+    <p id="tst5"></p>
+    <p id="tst6"></p>
+
+    <script>
+      /* number, strings and object example */
+      /* var width = 65; // number
+          var firstName = "sarafa"; //string
+          var x = { Surname: "Alamu", firstName: "sarafa" }; // object */
+
+      // var x = "invite" + 12 + 15;
+      var x = 12 + 15 + "invite";
+
+      document.getElementById("txtt").innerHTML = x;
+      /*the same variable can be used to hold different data types*/
+      var y; // y is undefined
+      var y = "school"; // y is a string
+      var y = 6; // y is a number
+      document.getElementById("txttt").innerHTML = y;
+
+      var phoneName1 = "samsung s20";
+      var phoneName2 = "samsung s22";
+      document.getElementById("tst").innerHTML =
+        phoneName1 + "</br>" + phoneName2;
+
+      /*quotes can be used in a string as long as they don't match the quotes surrounding the string*/
+      var ans1 = "it's okay";
+      var ans2 = "his name is 'Samuel'";
+      var ans3 = 'her name is "favour"';
+      document.getElementById("demo").innerHTML =
+        ans1 + "</br>" + ans2 + "</br>" + ans3;
+
+      /*extra large and extra small numbers can be written using scientific notation (exponential)*/
+      var y1 = 213e10;
+      var y2 = 213e-5;
+      var y3 = 453e5;
+      var y4 = 1532e-10;
+      document.getElementById("txtt1").innerHTML =
+        y1 + "</br>" + y2 + "</br>" + y3 + "<br>" + y4;
+
+      /*booleans can only answer two values (true or values)*/
+      var x = 10,
+        y = 15,
+        z = 10;
+      document.getElementById("tst1").innerHTML = (x == y) + "</br>" + (x == z);
+
+      var university = ["FUTA", "UNILORIN", "OAU"];
+      document.getElementById("demo1").innerHTML = university[2];
+
+      var states = ["KWARA", "LAGOS", "KANO", "ABIA"];
+      document.getElementById("demo11").innerHTML = states[1];
+
+      var student = {
+        Surname: "Ajao",
+        firstName: "Michael",
+        Age: 24,
+        skinColor: "black",
+      }; // the object (student) has four properties (Surname, firstName, Age, skinColor.)
+
+      student = undefined;
+
+      document.getElementById("demo2").innerHTML =
+        /*student.Surname +
+        " is " +
+        student.Age +
+        " years old " +
+        student.skinColor +
+        " skinned. " +
+        "</br>" + */
+        student;
+
+      /* var person = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 50,
+        eyeColor: "blue",
+      };
+
+      document.getElementById("demo2").innerHTML =
+        person.firstName + " is " + person.age + " years old.";*/
+
+      /*typeof for primitive data*/
+      document.getElementById("tst2").innerHTML =
+        typeof 23.0 +
+        "</br>" +
+        typeof "johnbull" +
+        "</br>" +
+        typeof "" +
+        "</br>" +
+        typeof (3 + 9) +
+        "</br>" +
+        typeof false +
+        "</br>" +
+        typeof true +
+        "</br>" +
+        typeof q;
+
+      var x = ""; // the value of x is "" and type of x is string
+      document.getElementById("tst3").innerHTML =
+        "the value of x is: " + x + "</br>" + "the type of x is: " + typeof x;
+      /*difference between null and undefined*/
+      document.getElementById("tst4").innerHTML =
+        typeof null +
+        "</br>" +
+        typeof undefined +
+        "</br></br>" +
+        (null == undefined) +
+        "</br>" +
+        (null === undefined); //equal in value but different in type
+
+      /*typeof for complex data*/
+      document.getElementById("tst5").innerHTML =
+        typeof {
+          post: "headteacher",
+          category: "worker",
+        } +
+        "</br>" +
+        typeof null +
+        "</br>" +
+        typeof ["mazda", "volvo", "toyota"] +
+        "</br>" +
+        typeof function myFunc() {};
+
+      var x = "";
+      x = null;
+      document.getElementById("tst6").innerHTML =
+        "the value of x is:" + x + "<br>" + "the type of x is: " + typeof x;
+
+      // stopped at js functions
+    </script>
+  </body>
+</html>
+
+<!-- primitive data
+ A primitive data value is a single simple data value with no additional properties and methods.
+ string, number, boolean, undefined -->
+
+<!-- complex data
+ returns two types of complex data types
+ object, function
+ returns object for object,arrays, null. doesnot return object for function
+   -->

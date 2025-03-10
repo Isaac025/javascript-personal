@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>object</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+
+    <button
+      type="button"
+      onmouseover="document.getElementById('demo3').innerHTML = Date()"
+    >
+      the time is?
+    </button>
+
+    <button type="button" onclick="this.innerHTML = Date()">
+      the time is?
+    </button>
+
+    <!-- using functions -->
+    <button type="button" onclick="displaydate()">Time is?</button>
+
+    <script>
+      // create an object:
+      var person = {
+        firstName: "John",
+        lastName: "Bull",
+        age: 50,
+        eye_color: "blue",
+      };
+
+      // display some data from the object
+      document.getElementById("demo").innerHTML =
+        "there is a man called " +
+        person.firstName +
+        " " +
+        person.lastName +
+        " he is " +
+        person.age +
+        " years old " +
+        "and has " +
+        person.eye_color +
+        " eyes";
+
+      // create an object:
+      var person = {
+        firstName: "John",
+        lastName: "Bull",
+        age: 50,
+        eye_color: "blue",
+      };
+
+      // display some data from the object
+      document.getElementById("demo1").innerHTML =
+        "there is a man called " +
+        person["firstName"] +
+        " " +
+        person["lastName"];
+
+      // a method is a function stored as a property
+      var car = {
+        name: "Fiat",
+        model: 500,
+        weight: 850,
+        color: "white",
+
+        /**
+         *
+         */
+        carname: function () {
+          return this.name + " " + "has a " + this.color + " color";
+        },
+      };
+
+      document.getElementById("demo2").innerHTML = car.carname();
+
+      //In a function definition, this refers to the "owner" of the function.
+      //In the example above, this is the person object that "owns" the name function.
+
+      //In other words, this.name means the name property of this object.
+
+      //If you access a method without the () parentheses, it will return the function definition:
+
+      /* java script events*/
+      function displaydate() {
+        document.getElementById("demo4").innerHTML = Date();
+      }
+
+      // javascript strings (quotes inside a string)
+      var answer1 = "he is called 'Johnny'";
+      var answer2 = 'he is called "Johnny"';
+      document.getElementById("demo5").innerHTML = answer1 + "<br>" + answer2;
+
+      //js string length
+      var txt = "aeiou";
+      // var sln = txt.length;
+      document.getElementById("demo6").innerHTML = txt.length;
+
+      // escape character
+      var y = 'i will never "forget" you';
+      document.getElementById("demo7").innerHTML = y;
+
+      var z = "He hasn't arrived";
+      document.getElementById("demo8").innerHTML = z;
+
+      document.getElementById("demo9").innerHTML =
+        "you need " + "me \\ i need you";
+
+      var $name = "chike"; // $name is a string
+      var $name1 = new String("chike"); // $name1 is an object
+      document.getElementById("demo10").innerHTML =
+        typeof $name + "<br>" + typeof $name1;
+      /* $name == $name1 (true) (because they are both of equal value )*/
+      /*$name === $name1 (returns false) (because they are not of equal type ie. string and object )*/
+
+      var x = new String("weeknd");
+      var y = new String("weeknd");
+      document.getElementById("demo11").innerHTML = x == y;
+      // x == y and x === y are false because x and y are two different objects
+      // comparing two javascript object will always retrun false
+    </script>
+  </body>
+</html>

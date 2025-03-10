@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>arithmetric</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <p id="test"></p>
+    <p id="txt"></p>
+    <p id="demo1"></p>
+    <p id="test1"></p>
+    <p id="txt1"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+  </body>
+</html>
+
+<script>
+  /* 10- operand, + - operator */
+  var g = 10 + 37 + 53; // arithmetric opperation on literals
+  document.getElementById("demo").innerHTML = g;
+
+  var a, b, c;
+  a = 12;
+  b = 10;
+  c = 12 / 10;
+  document.getElementById("test").innerHTML = c;
+
+  var a = 5;
+  x = (100 + 50) * a;
+  document.getElementById("txt").innerHTML = x;
+
+  var x = 139,
+    y = 3;
+  z = x % y;
+  document.getElementById("demo1").innerHTML = z;
+
+  var s = 22;
+  s++;
+  var n = s;
+  document.getElementById("test1").innerHTML = n;
+
+  var y = 10;
+  // y ** 3; // trying the other method
+  Math.pow(y, 3);
+  document.getElementById("txt1").innerHTML = Math.pow(y, 3);
+
+  // var z = (100 + 60) * 3;// the numbers inn the parenthesses are considered first
+  var z = 100 + 60 * 3;
+  document.getElementById("demo3").innerHTML = z;
+
+  var x, y;
+  x = 20;
+  y = 5;
+  // x %= y;
+  // x >>>= y;
+  // x **= y;
+  x ^= y;
+  document.getElementById("demo4").innerHTML = x;
+</script>

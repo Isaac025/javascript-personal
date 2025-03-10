@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CITIES</title>
+    <style>
+      /* styling the header */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        /* background-color: #1098ad; */
+      }
+
+      header {
+        background-color: #666;
+        text-align: center;
+        padding: 50px;
+        color: white;
+        font-size: 35px;
+        text-transform: uppercase;
+      }
+
+      /* styling section area with the two sections side to side */
+      section {
+        display: flex;
+      }
+      nav {
+        /* float: left; */
+        /* width: 30%; */
+        background-color: #ccc;
+        padding: 20px;
+        height: 500px;
+        flex: 1;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      article {
+        /* float: left; */
+        padding: 20px;
+        /* width: 70%; */
+        background-color: #f1f1f1;
+        height: 500px;
+        flex: 3;
+      }
+
+      h1 {
+        margin-bottom: 20px;
+      }
+
+      /* clear floats */
+      /* section::after {
+        content: "";
+        display: table;
+        clear: both;
+      } */
+
+      /* footer */
+      button {
+        background-color: #666;
+        text-align: center;
+        padding: 20px;
+        color: white;
+        font-size: 35px;
+        text-transform: uppercase;
+        width: 100%;
+      }
+
+      button:hover {
+        cursor: pointer;
+        background-color: aliceblue;
+        color: #151313;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2>Cities</h2>
+    </header>
+    <section>
+      <nav>
+        <ul>
+          <li><a href="#">London</a></li>
+          <li><a href="#">Paris</a></li>
+          <li><a href="#">Tokyo</a></li>
+        </ul>
+      </nav>
+      <article>
+        <h1>London</h1>
+        <p>
+          London is the capital city of England. It is the most populous city in
+          the United Kingdom, with a metropolitan area of over 13 million
+          inhabitants.
+        </p>
+        <p>
+          Standing on the River Thames, London has been a major settlement for
+          two millennia, its history going back to its founding by the Romans,
+          who named it Londinium.
+        </p>
+      </article>
+    </section>
+    <footer><button>THANKS</button></footer>
+  </body>
+</html>

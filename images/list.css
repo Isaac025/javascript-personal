@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  /* background-color: #333333; */
+  width: 25%;
+  height: 100%;
+  position: fixed;
+  overflow: auto;
+}
+
+/* li {
+  float: left;
+} */
+
+a:link {
+  display: block;
+  text-decoration: none;
+  color: #000;
+  padding: 16px;
+}
+
+a.home {
+  background-color: #4caf50;
+}
+
+a:hover:not(.home) {
+  font-style: italic;
+  background-color: #111;
+  color: white;
+}
+
+.side {
+  margin-left: 25%;
+  padding: 0 25px;
+  height: 1000px;
+}

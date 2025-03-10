@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cinque terra</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      section {
+        display: flex;
+      }
+
+      .menu {
+        flex: 1; /* to be figured out*/
+      }
+
+      .menuitem {
+        margin-top: 8px;
+        border-bottom: 1px solid #f1f1f1;
+        padding: 8px;
+        /* flex: 3; */
+      }
+
+      .main {
+        padding: 0 20px;
+        flex: 2;
+        overflow: hidden;
+      }
+
+      .walk {
+        margin-bottom: 10px;
+      }
+
+      p {
+        margin-bottom: 15px;
+      }
+
+      .right {
+        background-color: lightblue;
+        flex: 1;
+        padding: 10px 15px;
+        margin-top: 7px;
+      }
+
+      /* dropdown image  */
+      .dropimage {
+        display: inline-block;
+        position: relative;
+      }
+
+      .dropimage-content {
+        box-shadow: 0 13px 20px 0 rgba(0, 0, 0, 0.2);
+        display: none;
+        z-index: 1;
+      }
+
+      .dropimage:hover .dropimage-content {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 style="background-color: #f1f1f1; padding: 15px">Cinque Terre</h1>
+    </header>
+    <section>
+      <div style="overflow: auto">
+        <div class="menu">
+          <div class="menuitem">The Walk</div>
+          <div class="menuitem">Transport</div>
+          <div class="menuitem">History</div>
+          <div class="menuitem">Gallery</div>
+        </div>
+      </div>
+
+      <div class="main">
+        <h2 class="walk">The Walk</h2>
+        <p>
+          The walk from Monterosso to Riomaggiore will take you approximately
+          two hours, give or take an hour depending on the weather conditions
+          and your physical shape.
+        </p>
+        <div class="dropimage">
+          <img src="img_5terre.jpg" style="width: 100px; height: 50px" />
+          <div class="dropimage-content">
+            <img src="img_5terre.jpg" style="width: 500px; height: 300px" />
+          </div>
+        </div>
+      </div>
+
+      <div class="right">
+        <h2>What?</h2>
+        <p>
+          Cinque Terre comprises five villages: Monterosso, Vernazza, Corniglia,
+          Manarola, and Riomaggiore.
+        </p>
+        <h2>Where?</h2>
+        <p>
+          On the northwest cost of the Italian Riviera, north of the city La
+          Spezia.
+        </p>
+        <h2>Price?</h2>
+        <p>The Walk is free!</p>
+      </div>
+    </section>
+  </body>
+</html>
